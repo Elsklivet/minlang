@@ -1,0 +1,41 @@
+[32]
+Allocates 32 registers in a table
+
+Defines a function at location zero on the function table
+:(0)
+    Adds two to the current register
+    ++
+    Moves one register to the right
+    >
+    Subtracts one from the the register if its val is 0
+    ?(0)-
+    <
+    ; Moves back to original register and ends method and if
+
+:(1)
+    Notice that any character outside of the instruction set characters is ignored
+    Prints a character based on the ascii value of the current register
+    &
+    _
+    Prints the number the register holds
+    .
+    _
+    ; Ends method
+Adds two to register 0
+++
+Calls function 0
+^(0)
+Now register 0 should be 4, register 1 should be negative 1
+^(1)
+>
+We cannot print negative 1, it has no ascii value associated, so we will first increment it to 1
+++
+^(1)
+
+For fun we multiply it by 16
+****
+This will print 16 and its ascii char
+^(1)
+
+Program terminates here
+Use the show registers command flag to show the table of all registers
